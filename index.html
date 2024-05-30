@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YapperBot GPT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e1e;
+            color: #fff;
+        }
+
+        .chat-container {
+            max-width: 400px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #292929;
+        }
+
+        .chat-box {
+            height: 300px;
+            overflow-y: scroll;
+            padding: 10px;
+            background-color: #333;
+        }
+
+        #user-input {
+            width: calc(100% - 80px);
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #444;
+            color: #fff;
+        }
+
+        button {
+            width: 70px;
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box"></div>
+        <input type="text" id="user-input" placeholder="Type a message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <script>
+        function sendMessage() {
+            var userInput = document.getElementById("user-input").value;
+            if (userInput.trim() === "") return; // Don't send empty messages
+
+            // Display user message
+            displayMessage("You: " + userInput);
+
+            // Simulate bot response (replace with actual logic)
+            var botResponse = getBotResponse(userInput);
+            displayMessage("YapperBot GPT: " + botResponse);
+
+            // Clear input field
+            document.getElementById("user-input").value = "";
+        }
+
+        function displayMessage(message) {
+            var chatBox = document.getElementById("chat-box");
+            var newMessage = document.createElement("div");
+            newMessage.textContent = message;
+            chatBox.appendChild(newMessage);
+            chatBox.scrollTop = chatBox.scrollHeight; // Scroll to bottom
+        }
+
+        function getBotResponse(userInput) {
+          for (let i = 0; i < 2; i++) {
+           return "Yap Yap Yap iYap! Yap Yap Yap iYap! Yap Yap Yap iYap! Yap Yap Yap iYap! Yap Yap Yap iYap! Yap Yap Yap iYap! Yap Yap Yap iYap! Yap Yap Yap iYap! Yap Yap Yap iYap! Yap Yap Yap iYap! Yap Yap Yap iYap! Yap Yap Yap iYap! Yap Yap Yap iYap! Yap Yap Yap iYap! Yap Yap Yap iYap! Yap Yap Yap iYap! Yap Yap Yap iYap! Yap Yap Yap iYap! Yap Yap Yap iYap! Yap Yap Yap iYap! Yap Yap Yap iYap! Yap Yap Yap iYap! Yap Yap Yap iYap! Yap Yap Yap iYap! Yap Yap Yap iYap! ";
+          }
+        }
+    </script>
+</body>
+</html>
